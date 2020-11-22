@@ -20,6 +20,6 @@ You will have to make a number of decisions as you develop this solution:
 ```
 cd web
 export FLASK_APP=run.py
-run
+flask run
 ```
 
