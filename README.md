@@ -23,3 +23,36 @@ export FLASK_APP=run.py
 flask run
 ```
 
+## API Documentation
+**Show User**
+----
+  Returns json data of similiarity of two texts, with key `similiarity`.
+
+* **URL**
+
+  /get_sim
+
+* **Method:**
+
+  `POST`
+  
+*  **URL Params**
+
+   **Required:**
+ 
+  None
+
+* **Data Params**
+
+  `{"first": "some text","second":"another text"}`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{ "similiarity" : 0.867965}`
+
+* **Sample Call:**
+
+  ```
+  curl -i -H "Content-Type: application/json" -X POST -d '{"first":"The easiest way .","second":"The easiest way to earn points."}' http://localhost:5000/get_sim
+  ```
