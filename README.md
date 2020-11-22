@@ -24,7 +24,7 @@ flask run
 ```
 
 ## API Documentation
-**Show User**
+**Get Similiarity**
 ----
   Returns json data of similiarity of two texts, with key `similiarity`.
 
@@ -37,12 +37,11 @@ flask run
   `POST`
   
 *  **URL Params**
-
-   **Required:**
  
   None
 
 * **Data Params**
+  **Required:**
 
   `{"first": "some text","second":"another text"}`
 
