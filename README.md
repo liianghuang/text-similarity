@@ -1,14 +1,5 @@
 ## Introduction
-This is an algorithm to compute similiarity of two documents, the score should be 0 to 1, where 0 means there are no similiarity and 1 means they are identical.
-
-## Questions
-You will have to make a number of decisions as you develop this solution:
-
-* Do you count punctuation or only words?  
-* Which words should matter in the similarity comparison?  
-* Do you care about the ordering of words?  
-* What metric do you use to assign a numerical value to the similarity?  
-* What type of data structures should be used? (Hint: Dictionaries and lists are particularly helpful data structures that can be leveraged to calculate the similarity of two pieces of text.)  
+This is an algorithm to compute similiarity of two documents, the score should be 0 to 1, where 0 means there are no similiarity and 1 means they are identical. 
 
 ## Requirements
 1. Use the 3 sample texts provided below to develop your app. Samples 1 and 2 should be more similar than samples 1 and 3.
@@ -30,7 +21,7 @@ flask run
 
 * **URL**
 
-  /get_sim
+  /get_sim/<option>
 
 * **Method:**
 
@@ -38,7 +29,8 @@ flask run
   
 *  **URL Params**
 
-  `None`
+  `option: string`
+  There are two options to calculate similiarity of documents, `cosine_similiarity` or `word2vec` 
 
 * **Data Params**  
   **Required:**
@@ -53,5 +45,13 @@ flask run
 * **Sample Call:**
 
   ```
-  curl -i -H "Content-Type: application/json" -X POST -d '{"first":"The easiest way .","second":"The easiest way to earn points."}' http://localhost:5000/get_sim
+  curl -i -H "Content-Type: application/json" -X POST -d '{"first":"The easiest way .","second":"The easiest way to earn points."}' http://localhost:5000/get_sim/cosine_similiarity
   ```
+
+## Questions to consider
+
+* Do you count punctuation or only words?  
+* Which words should matter in the similarity comparison?  
+* Do you care about the ordering of words?  
+* What metric do you use to assign a numerical value to the similarity?  
+* What type of data structures should be used? (Hint: Dictionaries and lists are particularly helpful data structures that can be leveraged to calculate the similarity of two pieces of text.) 
