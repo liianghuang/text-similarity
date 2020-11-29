@@ -21,7 +21,7 @@ flask run
 
 * **URL**
 
-  /get_sim/<option>
+  /get_sim/option
 
 * **Method:**
 
