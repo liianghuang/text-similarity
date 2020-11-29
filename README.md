@@ -29,7 +29,7 @@ flask run
   
 *  **URL Params**
 
-    `option: string`
+    `option: string`  
     There are two options to calculate similiarity of documents, `cosine_similiarity` or `word2vec` 
 
 * **Data Params**  
