@@ -2,10 +2,14 @@
 This is an algorithm to compute similiarity of two documents, the score should be 0 to 1, where 0 means there are no similiarity and 1 means they are identical. 
 
 ## Requirements
-1. Use the 3 sample texts provided below to develop your app. Samples 1 and 2 should be more similar than samples 1 and 3.
-2. Only standard libraries may be used
-3. Package this application as a web service that performs the comparison in response to a POST request containing the two texts in the body of the payload. You may use external libraries (i.e., Flask).
-4. Package the web service in a Docker container that can be built and run locally or pulled down and run via Docker Hub.
+* **Pretrained embedding for word2vec**  
+    Can be found [here](https://wikipedia2vec.github.io/wikipedia2vec/pretrained/) for your use case. Here I used `enwiki_20180420` with 100 dimesional vector for demonstration.
+* **Stopwords from spacy**  
+    Get it using the following code
+    ```
+    pip install spacy
+    python3 -m spacy download en_core_web_sm
+    ```
 
 ## How to run web app
 ```
